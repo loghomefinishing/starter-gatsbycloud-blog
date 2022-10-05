@@ -11,6 +11,9 @@ const ArticlePreview = ({ posts }) => {
   if (!posts) return null
   if (!Array.isArray(posts)) return null
 
+
+  
+
   return (
     <Container>
       <ul className={styles.articleList}>
@@ -26,12 +29,15 @@ const ArticlePreview = ({ posts }) => {
               </div>
               <div className={styles.meta}>
                 <small className="meta">{post.publishDate}</small>
+                <small className='meta'>{post.createdAt}</small>
+                <small className='meta'>{post.title}</small>
                 <Tags tags={post.tags} />
               </div>
             </li>
           )
         })}
       </ul>
+   
     </Container>
   )
 }
