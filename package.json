@@ -26,6 +26,7 @@
     "contentful-import": "^8.0.0",
     "gatsby-provision-contentful": "0.0.3",
     "netlify-cli": "^10.0.0"
+    
   },
   "engines": {
     "node": ">=14.0.0"
@@ -43,6 +44,7 @@
     "url": "git+https://github.com/contentful/starter-gatsby-blog.git"
   },
   "scripts": {
+    "develop": "GATSBY_GRAPHQL_IDE=playground gatsby develop",
     "dev": "gatsby develop",
     "build": "gatsby build",
     "heroku-postbuild": "gatsby build",
