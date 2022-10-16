@@ -12,12 +12,14 @@ const ArticlePreview = ({ posts }) => {
   if (!Array.isArray(posts)) return null
 
 
+
+
   
 
   return (
     <Container>
       <ul className={styles.articleList}>
-        {posts.map((post) => {
+        {posts.map((post, chinking) => {
           return (
             <li key={post.slug}>
               <Link to={`/blog/${post.slug}`} className={styles.link}>
@@ -31,6 +33,7 @@ const ArticlePreview = ({ posts }) => {
                 <small className="meta">{post.publishDate}</small>
                 <small className='meta'>{post.createdAt}</small>
                 <small className='meta'>{post.title}</small>
+                <small className='meta'>{chinking.title}</small>
                 <Tags tags={post.tags} />
               </div>
             </li>

@@ -10,7 +10,7 @@ class RootIndex extends React.Component {
   render() {
     const posts = get(this, 'props.data.allContentfulBlogPost.nodes')
     const [author] = get(this, 'props.data.allContentfulPerson.nodes')
-    const chinking = get(this, 'props.data.allContentfulChinking')
+    const chinking = get(this, 'props.data.allContentfulChinking.nodes')
 
     return (
       <Layout location={this.props.location}>
@@ -19,7 +19,7 @@ class RootIndex extends React.Component {
           title={author.name}
           content={author.shortBio}
           author={author.createdAt}
-          chinking={chinking.title}
+          chinking={chinking.createdAt}
         />
         <ArticlePreview posts={posts}/>
       </Layout>
